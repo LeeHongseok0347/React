@@ -7,21 +7,32 @@
 3. index.html에서 변수로 매핑된 js파일을 바디부분에 넣어준다.  
 
 
-    //App.js  : App를 정의한다.
-    function App() {
-      return <div> hello </div>
-    }
-    export default App;
+        //App.js  : App를 정의한다.
+        function App() {
+            return <div> hello </div>
+        }
+        export default App;
       
-    //index.js : App를 root라는 이름으로 매핑해준다.
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
+        //index.js : App를 root라는 이름으로 매핑해준다.
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     
-    //index.html : root를 표시해 준다.
-    <body>
-      <div id="root"></div>
-    </body>
+        //index.html : root를 표시해 준다.
+        <body>
+            <div id="root"></div>
+        </body>
     
     
-## 기본 동작 원리
+## function은 대문자로 해야 임포트가 된다.
+
+        function Wood() {
+            return <div> hello </div>
+        }
+        export default Wood;
+        
+        // 임포트 안됨
+        function wood() {
+            return <div> hello </div>
+        }
+        export default wood;
 
